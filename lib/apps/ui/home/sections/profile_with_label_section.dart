@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:si_wise_aging_user_app/apps/global/constants/assets.dart';
 import 'package:si_wise_aging_user_app/apps/global/theme/color_cheme.dart';
 
 // 프로필 이미지와 라벨이 있는 섹션
@@ -12,13 +13,9 @@ class ProfileWithLabelSection extends StatelessWidget {
 
     return Row(
       children: [
-        Container(
+        Image.asset(
+          Assets.profileImage.path,
           width: 64,
-          height: 64,
-          decoration: const BoxDecoration(
-            color: Colors.pink,
-            shape: BoxShape.circle,
-          ),
         ),
         const SizedBox(
           width: 16,

@@ -15,9 +15,9 @@ class MedicationPage extends ConsumerStatefulWidget {
 class _MedicationPageState extends ConsumerState<MedicationPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CustomAppbar(leading: Container(), title: "투약"),
-      body: const SingleChildScrollView(
+    return const Scaffold(
+      appBar: CustomAppbar(title: "투약"),
+      body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(16),
           child: Column(

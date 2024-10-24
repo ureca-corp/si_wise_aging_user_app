@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:si_wise_aging_user_app/apps/global/constants/assets.dart';
 import 'package:si_wise_aging_user_app/apps/ui/home/sections/buttons_section.dart';
 import 'package:si_wise_aging_user_app/apps/ui/home/sections/menu_list_section.dart';
@@ -19,7 +18,8 @@ class _HomePageState extends ConsumerState<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppbar(
-        leading: SvgPicture.asset(
+        unBackButton: true,
+        leading: Image.asset(
           Assets.logoIcon.path,
           width: 36,
           height: 22,
