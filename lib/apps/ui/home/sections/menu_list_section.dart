@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:si_wise_aging_user_app/apps/global/constants/assets.dart';
 import 'package:si_wise_aging_user_app/apps/global/router/router.dart';
 import 'package:si_wise_aging_user_app/apps/global/theme/color_cheme.dart';
+import 'package:si_wise_aging_user_app/apps/ui/diet_with_schedule/diet_with_schedule_page.dart';
 import 'package:si_wise_aging_user_app/apps/ui/home/components/list_item.dart';
 import 'package:si_wise_aging_user_app/common/components/border_box/border_box.dart';
 
@@ -46,9 +47,14 @@ class _HomePageMenuListSectionState
           child: Column(
             children: [
               HomePageMainListItem(
-                onTap: () => handleMenuListClick(
-                  PageRouters.dietWithSchedule.path,
-                ),
+                onTap: () => {
+                  context.push(
+                    PageRouters.dietWithSchedule.path,
+                    extra: DietWithSchedulePageArgs(
+                      tabIndex: 0,
+                    ),
+                  )
+                },
                 label: "식단",
                 startWidget: _buildIcon(
                   assetspath: Assets.dietIcon.path,
@@ -56,7 +62,14 @@ class _HomePageMenuListSectionState
               ),
               _buildDivider(),
               HomePageMainListItem(
-                onTap: () {},
+                onTap: () => {
+                  context.push(
+                    PageRouters.dietWithSchedule.path,
+                    extra: DietWithSchedulePageArgs(
+                      tabIndex: 1,
+                    ),
+                  )
+                },
                 label: "일정표 & 활동 기록",
                 startWidget: _buildIcon(
                   assetspath: Assets.scheduleIcon.path,
@@ -64,7 +77,9 @@ class _HomePageMenuListSectionState
               ),
               _buildDivider(),
               HomePageMainListItem(
-                onTap: () {},
+                onTap: () => handleMenuListClick(
+                  PageRouters.attendanceReceipt.path,
+                ),
                 label: "출결 & 비용 납부",
                 startWidget: _buildIcon(
                   assetspath: Assets.documentIcon.path,
@@ -72,7 +87,9 @@ class _HomePageMenuListSectionState
               ),
               _buildDivider(),
               HomePageMainListItem(
-                onTap: () => handleMenuListClick(PageRouters.medication.path),
+                onTap: () => handleMenuListClick(
+                  PageRouters.medication.path,
+                ),
                 label: "투약",
                 startWidget: _buildIcon(
                   assetspath: Assets.medicationIcon.path,

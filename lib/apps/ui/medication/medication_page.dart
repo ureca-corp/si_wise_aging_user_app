@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:si_wise_aging_user_app/apps/ui/medication/sections/caption_section.dart';
+
+import 'package:si_wise_aging_user_app/apps/ui/medication/sections/caption_with_calender.dart';
 import 'package:si_wise_aging_user_app/apps/ui/medication/sections/history_section.dart';
 import 'package:si_wise_aging_user_app/common/components/custom_appbar/custom_appbar.dart';
 
@@ -18,17 +19,11 @@ class _MedicationPageState extends ConsumerState<MedicationPage> {
     return const Scaffold(
       appBar: CustomAppbar(title: "투약"),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(16),
-          child: Column(
-            children: [
-              MedicinePageCaptionSection(),
-              SizedBox(
-                height: 16,
-              ),
-              MedicationHistorySection()
-            ],
-          ),
+        child: Column(
+          children: [
+            MedicinePageCaptionWithCalenderSection(),
+            MedicationHistorySection()
+          ],
         ),
       ),
     );

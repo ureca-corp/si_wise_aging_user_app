@@ -6,6 +6,7 @@ import 'package:si_wise_aging_user_app/apps/ui/home/sections/menu_list_section.d
 import 'package:si_wise_aging_user_app/apps/ui/home/sections/profile_with_label_section.dart';
 import 'package:si_wise_aging_user_app/common/components/custom_appbar/custom_appbar.dart';
 
+// 홈 페이지
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
 

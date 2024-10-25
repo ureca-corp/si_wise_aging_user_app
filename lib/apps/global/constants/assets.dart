@@ -22,7 +22,10 @@ enum Assets {
 
   // svg 아이콘 파일
   dateIcon('$assetPath/icons/date_icon.svg'),
-  arrowDownIcon('$assetPath/icons/arrow_down_icon.svg');
+  arrowDownIcon('$assetPath/icons/arrow_down_icon.svg'),
+
+  // svg 이미지 파일
+  datePickerImage('$assetPath/images/date_picker_image.svg');
 
   const Assets(this.path);
 

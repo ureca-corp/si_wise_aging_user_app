@@ -4,6 +4,7 @@ import 'package:si_wise_aging_user_app/apps/ui/create_medication_requeset/sectio
 import 'package:si_wise_aging_user_app/apps/ui/create_medication_requeset/sections/sign_section.dart';
 import 'package:si_wise_aging_user_app/common/components/custom_appbar/custom_appbar.dart';
 
+// 투약 의뢰서 작성 페이지
 class CreateMedicationRequesetPage extends ConsumerStatefulWidget {
   const CreateMedicationRequesetPage({super.key});
 
@@ -16,23 +17,19 @@ class _CreateMedicationRequesetPageState
     extends ConsumerState<CreateMedicationRequesetPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: CustomAppbar(
-        leading: Container(),
         title: "투약 의뢰서 작성",
       ),
-      body: const SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 32),
-          child: Column(
-            children: [
-              MedicationFormsSection(),
-              SizedBox(
-                height: 32,
-              ),
-              MedicationSignSection(),
-            ],
-          ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            MedicationFormsSection(),
+            SizedBox(
+              height: 32,
+            ),
+            MedicationSignSection(),
+          ],
         ),
       ),
     );
