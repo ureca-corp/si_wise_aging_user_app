@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:si_wise_aging_user_app/apps/global/constants/assets.dart';
 import 'package:si_wise_aging_user_app/apps/global/theme/color_cheme.dart';
 
 // 캘린더 섹션
@@ -18,18 +16,20 @@ class _CalenderSectionState extends ConsumerState<CalenderSection> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(
+        const Padding(
+          padding: EdgeInsets.all(
             16,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SvgPicture.asset(
-                Assets.dateIcon.path,
-                width: 20,
+              Icon(
+                Icons.calendar_today_rounded,
+                color: Color(
+                  0xFF999999,
+                ),
               ),
-              const Text(
+              Text(
                 "2023년 4월",
                 style: TextStyle(
                   fontSize: 16,
@@ -38,9 +38,11 @@ class _CalenderSectionState extends ConsumerState<CalenderSection> {
                   ),
                 ),
               ),
-              SvgPicture.asset(
-                Assets.arrowDownIcon.path,
-                width: 12,
+              Icon(
+                Icons.keyboard_arrow_down_rounded,
+                color: Color(
+                  0xFF999999,
+                ),
               ),
             ],
           ),

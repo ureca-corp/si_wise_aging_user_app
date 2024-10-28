@@ -33,8 +33,6 @@ class _DietWithSchedulePageState extends ConsumerState<DietWithSchedulePage> {
   @override
   Widget build(BuildContext context) {
     int initialTabIndex = widget.args?.tabIndex ?? 0;
-    print("----------");
-    print(initialTabIndex);
 
     return DefaultTabController(
       length: 2,
@@ -47,13 +45,13 @@ class _DietWithSchedulePageState extends ConsumerState<DietWithSchedulePage> {
           children: [
             const CalenderSection(),
             Container(
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.surface,
+              decoration: const BoxDecoration(
+                color: colorPrimary90,
               ),
               child: const TabBar(
                 tabs: [
                   Tab(
-                    text: "식사",
+                    text: "식단",
                   ),
                   Tab(
                     text: "일정표",
