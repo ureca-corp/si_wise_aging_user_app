@@ -34,7 +34,7 @@ class _HomePageMenuListSectionState
         BorderBox(
           child: HomePageMainListItem(
             onTap: () {},
-            label: "24년 인플루엔자(독감) 예방접종",
+            label: "센터 공지사항",
             startWidget: _buildIcon(
               assetspath: Assets.bellIcon.path,
             ),

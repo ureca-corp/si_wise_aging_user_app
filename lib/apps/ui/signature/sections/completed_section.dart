@@ -33,7 +33,7 @@ class CompletedSignatureSection extends StatelessWidget {
           ),
           const ScheduleListItem(
             dateLabel: "2024년 10월 12일까지",
-            titleLabel: "홍길동 어르신",
+            titleLabel: "제공계획서",
             contentLabel: "제출완료",
           ),
           const SizedBox(
@@ -41,7 +41,7 @@ class CompletedSignatureSection extends StatelessWidget {
           ),
           const ScheduleListItem(
             dateLabel: "2024년 10월 12일까지",
-            titleLabel: "홍길동 어르신",
+            titleLabel: "표준이용계약서",
             contentLabel: "제출완료",
           ),
           const SizedBox(
@@ -49,7 +49,7 @@ class CompletedSignatureSection extends StatelessWidget {
           ),
           const ScheduleListItem(
             dateLabel: "2024년 10월 12일까지",
-            titleLabel: "홍길동 어르신",
+            titleLabel: "갱신계약서",
             contentLabel: "제출완료",
           ),
         ],
